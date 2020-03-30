@@ -31,6 +31,12 @@ export default (state, action) => {
         ...state,
         loading:true
       }
+    case GET_REPOS:
+      return {
+        ...state,
+        repos: action.payload,
+        laoding: false
+      }
     default:
       return state;
   }
